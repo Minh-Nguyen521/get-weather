@@ -33,7 +33,6 @@ struct Main {
 struct Country {
     code: String,
     name: String,
-    path: String,
 }
 
 async fn fetch_weather(city: &str, country_code: &str) -> Result<WeatherResponse, Error> {
