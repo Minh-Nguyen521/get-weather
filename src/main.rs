@@ -46,6 +46,7 @@ async fn fetch_weather(city: &str, country_code: &str) -> Result<WeatherResponse
     );
     let response = reqwest::get(&url).await?;
     let response_json = response.json::<WeatherResponse>().await?;
+    // println!("{:?}", response_json);
     Ok(response_json)
 }
 
@@ -66,7 +67,7 @@ async fn main() {
     println!("Enter your city:");
     io::stdin().read_line(&mut city).expect("Failed to read input");
 
-    println!("Enter your country code:");
+    println!("Enter your country:");
     io::stdin().read_line(&mut country_code).expect("Failed to read input");
 
     let city = city.trim();
