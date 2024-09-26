@@ -2,6 +2,8 @@ use std::io;
 use reqwest::Error;
 use serde::Deserialize;
 
+// get your API key from https://home.openweathermap.org/users/sign_up
+// my API key not working more, so you have to get your own API key
 const API_KEY: &str = "340baf8dd2a3be2840ac044394854931";
 
 #[derive(Deserialize, Debug)]
