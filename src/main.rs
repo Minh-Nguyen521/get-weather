@@ -4,6 +4,8 @@ use serde::Deserialize;
 
 // Get your API key from https://home.openweathermap.org
 // My API key doesn't work anymore so you have to get your own API key
+// You should use a .env file to store your API key
+// This is just a simple example to show how to use reqwest and serde
 const API_KEY: &str = "340baf8dd2a3be2840ac044394854931";
 
 #[derive(Deserialize, Debug)]
